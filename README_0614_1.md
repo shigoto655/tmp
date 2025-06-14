@@ -1,26 +1,30 @@
-■export defaultの書き方
-「export default」は他の部品から呼び出しが出来るようにする書き方。
-以下は挙動としてはどちらも一緒。
-使い分けするとしたら以下になる。
-ファイル内で1つしかエクスポートしない場合は①
-ファイル内で複数のエクスポートがある場合は②
+■export defaultの書き方  
+「export default」は他の部品から呼び出しが出来るようにする書き方。  
+  
+以下は挙動としてはどちらも一緒。  
+使い分けするとしたら以下になる。 
+  
+-ファイル内で1つしかエクスポートしない場合は①  
+-ファイル内で複数のエクスポートがある場合は②
 
 ①
 ------------------------------------------
-export default function RootLayout({
- children,
-}: Readonly<{
- children: React.ReactNode;
-}>) {
- return ( 
- {children}
-
- );
-};
+```tsx
+ export default function RootLayout({
+   children,
+   }: Readonly<{
+   children: React.ReactNode;
+ }>) {
+  return ( 
+  {children}
+  );
+ };
+```
 ------------------------------------------
 
 ②
 ------------------------------------------
+```tsx
 function RootLayout({
  children,
 }: Readonly<{
@@ -32,4 +36,5 @@ function RootLayout({
 };
 
 export default RootLayout;
+```
 ------------------------------------------
