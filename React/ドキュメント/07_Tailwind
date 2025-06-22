@@ -1,0 +1,34 @@
+# tailwind css v4.0の情報
+
+・Tailwindの公式
+https://tailwindcss.com/blog/tailwindcss-v4#css-first-configuration  
+
+・Tailwind × Pretteir  
+https://github.com/tailwindlabs/prettier-plugin-tailwindcss
+
+・Next.jsの公式
+https://tailwindcss.com/docs/installation/framework-guides/nextjs
+
+
+# Tailwindの設定方法
+・「layout.tsx」に以下を記載  
+```ts
+@import "tailwindcss";
+```
+
+# Prettier  
+以下のパッケージインストール
+```ts
+prettier-plugin-tailwindcss
+```  
+  
+以下の設定もpakage.jsonに実施
+```ts
+{
+  "scripts": {
+    "format": "prettier --write ."
+  }
+}
+```
+
+
